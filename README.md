@@ -41,7 +41,6 @@ $wp_customize->add_control( new Customizer_Range_Value_Control( $wp_customize, '
 ) ) );
 ```
 
-
 ## Credits
 
 The CSS and JavaScript is  copyright (c) 2016 by Sean Stopnik
