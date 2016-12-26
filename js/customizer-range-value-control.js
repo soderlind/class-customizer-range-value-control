@@ -1,7 +1,5 @@
 /**
  * Script run inside a Customizer control sidebar
- *
- * Enable / disable the control title by toggeling its .disabled-control-title style class on or off.
  */
 (function($) {
     wp.customize.bind('ready', function() {
@@ -17,12 +15,13 @@
 
             value.each(function() {
                 var value = $(this).prev().attr('value');
-                $(this).html(value);
+				var suffix = ($(this).prev().attr('suffix')) ? $(this).prev().attr('suffix') : '';
+                $(this).html(value + suffix);
             });
 
             range.on('input', function() {
-                $(this).next(value).html(this.value);
-				// $(this).html(this.value);
+				var suffix = ($(this).attr('suffix')) ? $(this).attr('suffix') : '';
+                $(this).next(value).html(this.value + suffix );
             });
         });
     };

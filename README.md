@@ -1,4 +1,4 @@
-# WordPress Customizer Range Value
+# WordPress Customizer Range Value Control
 
 A generic range with value control you can use to replace the range control.
 
@@ -33,9 +33,10 @@ $wp_customize->add_control( new Customizer_Range_Value_Control( $wp_customize, '
 	'settings' => 'my_settings',
 	'label'    => __( 'Width' ),
 	'input_attrs' => array(
-		'min'  => 1,
-		'max'  => 240,
-		'step' => 1,
+		'min'    => 1,
+		'max'    => 240,
+		'step'   => 1,
+		'suffix' => 'px', //optional suffix
   	),
 ) ) );
 ```
