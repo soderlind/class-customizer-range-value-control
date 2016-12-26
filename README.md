@@ -40,7 +40,22 @@ $wp_customize->add_control( new Customizer_Range_Value_Control( $wp_customize, '
 ) ) );
 ```
 
+## Adding px or % 
+You can add `px`or `%` to the number by modifying `js/customizer-range-value-control.js`:
+```js
+.
+.
+value.each(function() {
+	var value = $(this).prev().attr('value');
+	$(this).html(value  + 'px'); // replace px with % if you need percent.
+});
 
+range.on('input', function() {
+	$(this).next(value).html(this.value + 'px'); // replace px with % if you need percent.
+});
+.
+.
+```
 ## Credits
 
 The CSS and JavaScript is  copyright (c) 2016 by Sean Stopnik
