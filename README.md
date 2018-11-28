@@ -24,6 +24,19 @@ Add the following to your composer.json file and run `composer update`
 	}
 }
 ```
+If you want to install into the `vendor` folder, use
+```javascript
+"require": {
+	"soderlind/class-customizer-toggle-control": "dev-master"
+},
+"extra": {
+	"installer-paths": {
+		"vendor/soderlind/{$name}": [
+			"soderlind/class-customizer-range-value-control"
+		]
+	}
+}
+```
 
 or, clone the repo into `inc`
 
