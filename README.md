@@ -2,7 +2,7 @@
 
 A generic range with value control you can use to replace the range control.
 
-<img src="assets/customizer-range-value.gif" />
+<img src="assets/customizer-range-value-suffix.png" />
 
 ## Demo
 
